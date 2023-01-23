@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.blue{
+    background-color: #86d6e5;
+    width: 100%;
+    height: 60vh;
+    
+}
+.nuage{
+    background-image: url("../img/nuage.png");
+    width: 100%;
+    height: 60vh;
+    animation-name: nuages;
+    animation-duration: 20s;
+}
+.green-dark{
+    background-color: #556b31;
+    width: 100%;
+    height: 20vh;
+}
+.green {
+    background-image: url("../img/arbre.png"),
+                  url("../img/arbre2.png");
+    width: 200%;
+    height: 40vh;
+    position: absolute;
+    top: 37vh;
+    animation-name: nuages;
+    animation-duration: 10s;
+}
+.route{
+    background-image: url("../img/route.png");
+    width: 100%;
+    height: 24vh;
+    position: absolute;
+    top: 76vh;
+}
+.avion{
+    position: absolute;
+    overflow: hidden;
+    width: 280px;
+    height: 77px;
+    margin: -5% auto 0 auto;
+    top: 45vh;
+    right: -10vw;
+    animation-name: avion;
+    background: url(../img/avion.png);
+    animation: deplacer 6s ease-in 1s forwards, avion 0.2s steps(4) 1s infinite;
+}
+.voiture{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50px;
+    animation-name: voiture;
+    animation-duration: 10s;
+}
+@keyframes nuages {
+    0%{
+        translate: 0px;
+    }
+    100%{
+        translate: -150px;
+    }
+}
+@keyframes voiture {
+    0%{
+        translate: 0px;
+    }
+    100%{
+        translate: 1150px;
+        top: -45px;
+    }
+}
+@keyframes avion {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 320px;
+
+    }
+}
+@keyframes deplacer {
+    0%{
+        transform: translateX(0vh);
+    }
+    100%{
+        transform: translateX(-300vh) translateY(-50vh);
+    }
+}
